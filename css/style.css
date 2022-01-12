@@ -1,0 +1,123 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Karla", sans-serif;
+  color: hsl(218, 22%, 67%);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: hsl(204, 43%, 93%);
+}
+
+.container {
+  max-width: 60rem;
+  width: 85%;
+  margin: 5rem 0;
+}
+
+@media (min-width: 37.5em) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, [col-start] 1fr [col-end]);
+    margin: 0rem 0;
+  }
+}
+
+.btn {
+  border: none;
+  background-color: hsl(71, 73%, 54%);
+  padding: 1.5rem 6rem;
+  color: #fff;
+  text-transform: capitalize;
+  border-radius: 10px;
+}
+
+.community,
+.subscription,
+.whyus {
+  padding: clamp(1.5rem, 10vw, 3rem) 2rem;
+}
+
+.community {
+  background-color: #fff;
+}
+
+@media (min-width: 37.5em) {
+  .community {
+    grid-column: col-start 1 / col-start 3;
+  }
+}
+
+.community__content {
+  max-width: 60ch;
+}
+
+.community__content > *:not(:first-child),
+.subscription > *:not(:first-child),
+.whyus > *:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.community__head {
+  color: hsl(179, 62%, 43%);
+}
+
+.community__sub-head {
+  color: hsl(71, 73%, 54%);
+}
+
+.subscription {
+  background-color: hsl(179, 62%, 43%);
+}
+
+.subscription__head,
+.subscription__price {
+  color: #fff;
+}
+
+.subscription__price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.subscription__price-amount {
+  font-size: 4rem;
+  margin-right: 1rem;
+}
+
+.subscription__interval {
+  color: rgb(218, 218, 218);
+}
+.subscription__price-break {
+  display: block;
+  color: rgb(241, 241, 241);
+}
+
+.whyus {
+  background-color: hsl(179, 66%, 58%);
+}
+
+.whyus__head {
+  color: #fff;
+}
+
+.whyus__list {
+  color: rgb(221, 219, 219);
+}
